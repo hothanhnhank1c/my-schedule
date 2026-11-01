@@ -65,14 +65,14 @@ export const SakuraBlossomTemplate: React.FC<TemplateProps> = ({ data }) => {
       {/* Main Grid */}
       <div className="relative z-10 flex flex-col gap-3">
         {/* Days Header */}
-        <div className="grid grid-flow-col gap-2.5 items-center" style={{ gridTemplateColumns: `135px repeat(${days.length}, minmax(0, 1fr))` }}>
-          <div className="h-10 rounded-full bg-[#fdf2f8] border border-[#fbcfe8] flex items-center justify-center text-xs font-bold text-[#be185d] tracking-wider uppercase font-sans">
+        <div className="grid grid-flow-col gap-2.5 items-center" style={{ gridTemplateColumns: `150px repeat(${days.length}, minmax(0, 1fr))` }}>
+          <div className="h-11 rounded-full bg-[#fdf2f8] border border-[#fbcfe8] flex items-center justify-center text-xs font-bold text-[#be185d] tracking-wider uppercase font-sans">
             Giờ học
           </div>
           {days.map((day, idx) => (
             <div
               key={idx}
-              className="h-11 rounded-full bg-gradient-to-r from-[#fbcfe8] to-[#f472b6] text-white flex items-center justify-center font-bold text-sm tracking-wide shadow-xs"
+              className="h-12 rounded-full bg-gradient-to-r from-[#fbcfe8] to-[#f472b6] text-white flex items-center justify-center font-black text-base tracking-wide shadow-xs"
             >
               {day}
             </div>
@@ -98,10 +98,10 @@ export const SakuraBlossomTemplate: React.FC<TemplateProps> = ({ data }) => {
                 <div 
                   key={rIdx} 
                   className="grid grid-flow-col gap-2.5 items-center" 
-                  style={{ gridTemplateColumns: `135px repeat(${days.length}, minmax(0, 1fr))` }}
+                  style={{ gridTemplateColumns: `150px repeat(${days.length}, minmax(0, 1fr))` }}
                 >
                   {/* Time Badge */}
-                  <div className="h-10 rounded-full bg-[#fce7f3] border border-[#fbcfe8] text-[#9d174d] flex items-center justify-center font-bold text-xs tracking-tight shadow-xs px-2 font-sans">
+                  <div className="h-11 rounded-full bg-[#fce7f3] border border-[#fbcfe8] text-[#9d174d] flex items-center justify-center font-black text-[15px] sm:text-base tracking-tight shadow-xs px-2 font-sans">
                     {slot.time}
                   </div>
 
@@ -113,7 +113,7 @@ export const SakuraBlossomTemplate: React.FC<TemplateProps> = ({ data }) => {
                     return (
                       <div
                         key={cIdx}
-                        className={`h-10 rounded-full flex items-center justify-center px-3 text-center text-xs font-bold shadow-xs transition-all ${
+                        className={`h-11 rounded-full flex items-center justify-center px-3 text-center text-[15px] sm:text-base font-extrabold shadow-xs transition-all ${
                           hasSubject
                             ? 'bg-[#ffe4e6] border border-[#fecdd3] text-[#9f1239]'
                             : 'bg-[#fff1f2]/60 border border-[#ffe4e6]/70 text-transparent'

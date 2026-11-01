@@ -62,14 +62,14 @@ export const StrawberryMilkTemplate: React.FC<TemplateProps> = ({ data }) => {
       {/* Main Grid */}
       <div className="relative z-10 flex flex-col gap-3">
         {/* Days Header */}
-        <div className="grid grid-flow-col gap-2.5 items-center" style={{ gridTemplateColumns: `135px repeat(${days.length}, minmax(0, 1fr))` }}>
-          <div className="h-11 rounded-2xl bg-white border-2 border-[#ffb3c1] flex items-center justify-center text-xs font-extrabold text-[#c9184a] uppercase tracking-wider font-sans shadow-xs">
+        <div className="grid grid-flow-col gap-2.5 items-center" style={{ gridTemplateColumns: `150px repeat(${days.length}, minmax(0, 1fr))` }}>
+          <div className="h-12 rounded-2xl bg-white border-2 border-[#ffb3c1] flex items-center justify-center text-xs font-black text-[#c9184a] uppercase tracking-wider font-sans shadow-xs">
             Thời Gian ⏰
           </div>
           {days.map((day, idx) => (
             <div
               key={idx}
-              className="h-11 rounded-2xl bg-[#ff758f] text-white flex items-center justify-center font-extrabold text-sm tracking-wide shadow-xs border-2 border-[#ff4d6d]"
+              className="h-12 rounded-2xl bg-[#ff758f] text-white flex items-center justify-center font-black text-base tracking-wide shadow-xs border-2 border-[#ff4d6d]"
             >
               {day}
             </div>
@@ -95,10 +95,10 @@ export const StrawberryMilkTemplate: React.FC<TemplateProps> = ({ data }) => {
                 <div 
                   key={rIdx} 
                   className="grid grid-flow-col gap-2.5 items-center" 
-                  style={{ gridTemplateColumns: `135px repeat(${days.length}, minmax(0, 1fr))` }}
+                  style={{ gridTemplateColumns: `150px repeat(${days.length}, minmax(0, 1fr))` }}
                 >
                   {/* Time Badge */}
-                  <div className="h-11 rounded-2xl bg-white border-2 border-[#ffccd5] text-[#800f2f] flex items-center justify-center font-extrabold text-xs tracking-tight shadow-xs px-2 font-sans">
+                  <div className="h-11 rounded-2xl bg-white border-2 border-[#ffccd5] text-[#800f2f] flex items-center justify-center font-black text-[15px] sm:text-base tracking-tight shadow-xs px-2 font-sans">
                     {slot.time}
                   </div>
 
@@ -110,7 +110,7 @@ export const StrawberryMilkTemplate: React.FC<TemplateProps> = ({ data }) => {
                     return (
                       <div
                         key={cIdx}
-                        className={`h-11 rounded-2xl flex items-center justify-center px-3 text-center text-xs font-bold shadow-xs transition-transform leading-tight overflow-hidden ${colorStyle}`}
+                        className={`h-11 rounded-2xl flex items-center justify-center px-3 text-center text-[15px] sm:text-base font-extrabold shadow-xs transition-transform leading-tight overflow-hidden ${colorStyle}`}
                         title={subject}
                       >
                         <span className="truncate w-full">{subject}</span>

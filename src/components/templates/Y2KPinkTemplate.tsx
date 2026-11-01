@@ -56,14 +56,14 @@ export const Y2KPinkTemplate: React.FC<TemplateProps> = ({ data }) => {
       {/* Main Grid */}
       <div className="relative z-10 flex flex-col gap-3">
         {/* Days Header */}
-        <div className="grid grid-flow-col gap-2.5 items-center" style={{ gridTemplateColumns: `135px repeat(${days.length}, minmax(0, 1fr))` }}>
-          <div className="h-11 rounded-xl bg-white border-2 border-[#ff007f] flex items-center justify-center text-xs font-black text-[#ff007f] uppercase tracking-wider shadow-sm">
+        <div className="grid grid-flow-col gap-2.5 items-center" style={{ gridTemplateColumns: `150px repeat(${days.length}, minmax(0, 1fr))` }}>
+          <div className="h-12 rounded-xl bg-white border-2 border-[#ff007f] flex items-center justify-center text-xs font-black text-[#ff007f] uppercase tracking-wider shadow-sm">
             TIME
           </div>
           {days.map((day, idx) => (
             <div
               key={idx}
-              className="h-11 rounded-xl bg-gradient-to-r from-[#ff007f] to-[#f72585] text-white flex items-center justify-center font-black text-sm tracking-wide shadow-md uppercase border border-pink-300"
+              className="h-12 rounded-xl bg-gradient-to-r from-[#ff007f] to-[#f72585] text-white flex items-center justify-center font-black text-base tracking-wide shadow-md uppercase border border-pink-300"
             >
               {day}
             </div>
@@ -89,10 +89,10 @@ export const Y2KPinkTemplate: React.FC<TemplateProps> = ({ data }) => {
                 <div 
                   key={rIdx} 
                   className="grid grid-flow-col gap-2.5 items-center" 
-                  style={{ gridTemplateColumns: `135px repeat(${days.length}, minmax(0, 1fr))` }}
+                  style={{ gridTemplateColumns: `150px repeat(${days.length}, minmax(0, 1fr))` }}
                 >
                   {/* Time Badge */}
-                  <div className="h-10 rounded-xl bg-white border-2 border-[#ffb3c1] text-[#7209b7] flex items-center justify-center font-mono font-black text-xs tracking-tight shadow-sm px-2">
+                  <div className="h-11 rounded-xl bg-white border-2 border-[#ffb3c1] text-[#7209b7] flex items-center justify-center font-mono font-black text-[15px] sm:text-base tracking-tight shadow-sm px-2">
                     {slot.time}
                   </div>
 
@@ -104,7 +104,7 @@ export const Y2KPinkTemplate: React.FC<TemplateProps> = ({ data }) => {
                     return (
                       <div
                         key={cIdx}
-                        className={`h-10 rounded-xl flex items-center justify-center px-3 text-center text-xs font-bold transition-all shadow-xs ${
+                        className={`h-11 rounded-xl flex items-center justify-center px-3 text-center text-[15px] sm:text-base font-extrabold transition-all shadow-xs ${
                           hasSubject
                             ? 'bg-white border-2 border-[#ff007f] text-[#ff007f] font-black'
                             : 'bg-white/40 border border-pink-200 text-transparent'

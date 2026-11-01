@@ -83,15 +83,15 @@ export const PastelRainbowTemplate: React.FC<TemplateProps> = ({ data }) => {
       {/* Main Timetable Content */}
       <div className="relative z-10 flex flex-col gap-3">
         {/* Header Days Row */}
-        <div className="grid grid-flow-col gap-3 items-center" style={{ gridTemplateColumns: `140px repeat(${days.length}, minmax(0, 1fr))` }}>
+        <div className="grid grid-flow-col gap-3 items-center" style={{ gridTemplateColumns: `150px repeat(${days.length}, minmax(0, 1fr))` }}>
           {/* Blank space above time column */}
-          <div className="h-10"></div>
+          <div className="h-11"></div>
           
           {/* Day pill labels */}
           {days.map((day, idx) => (
             <div
               key={idx}
-              className={`h-11 rounded-full flex items-center justify-center font-bold text-base tracking-wide shadow-sm transition-all ${getColColor(idx)}`}
+              className={`h-12 rounded-full flex items-center justify-center font-black text-lg tracking-wide shadow-sm transition-all ${getColColor(idx)}`}
             >
               {day}
             </div>
@@ -118,10 +118,10 @@ export const PastelRainbowTemplate: React.FC<TemplateProps> = ({ data }) => {
                 <div 
                   key={rIdx} 
                   className="grid grid-flow-col gap-3 items-center" 
-                  style={{ gridTemplateColumns: `140px repeat(${days.length}, minmax(0, 1fr))` }}
+                  style={{ gridTemplateColumns: `150px repeat(${days.length}, minmax(0, 1fr))` }}
                 >
                   {/* Time Pill Badge */}
-                  <div className="h-10 rounded-full bg-[#c2effb] text-slate-800 flex items-center justify-center font-extrabold text-sm tracking-tight shadow-sm px-2 text-center">
+                  <div className="h-11 rounded-full bg-[#c2effb] text-slate-800 flex items-center justify-center font-black text-[15px] sm:text-base tracking-tight shadow-sm px-2 text-center">
                     {slot.time}
                   </div>
 
@@ -131,7 +131,7 @@ export const PastelRainbowTemplate: React.FC<TemplateProps> = ({ data }) => {
                     return (
                       <div
                         key={cIdx}
-                        className={`h-10 rounded-full flex items-center justify-center px-3 text-center text-xs sm:text-sm font-bold shadow-sm transition-transform leading-tight overflow-hidden ${getColColor(cIdx)}`}
+                        className={`h-11 rounded-full flex items-center justify-center px-3 text-center text-[15px] sm:text-base font-extrabold shadow-sm transition-transform leading-tight overflow-hidden ${getColColor(cIdx)}`}
                         title={subject}
                       >
                         <span className="truncate w-full">{subject}</span>

@@ -41,14 +41,14 @@ export const CoquetteRibbonTemplate: React.FC<TemplateProps> = ({ data }) => {
       {/* Main Grid */}
       <div className="relative z-10 flex flex-col gap-3">
         {/* Days Header */}
-        <div className="grid grid-flow-col gap-2.5 items-center" style={{ gridTemplateColumns: `135px repeat(${days.length}, minmax(0, 1fr))` }}>
-          <div className="h-10 rounded-xl bg-[#fff0f3] border border-[#f8bcc9] flex items-center justify-center text-xs font-bold text-[#b5179e] tracking-wider uppercase font-sans">
+        <div className="grid grid-flow-col gap-2.5 items-center" style={{ gridTemplateColumns: `150px repeat(${days.length}, minmax(0, 1fr))` }}>
+          <div className="h-11 rounded-xl bg-[#fff0f3] border border-[#f8bcc9] flex items-center justify-center text-xs font-bold text-[#b5179e] tracking-wider uppercase font-sans">
             Timeline
           </div>
           {days.map((day, idx) => (
             <div
               key={idx}
-              className="h-10 rounded-xl bg-[#ffd6df] text-[#702434] border border-[#f4abbd] flex items-center justify-center font-bold text-sm tracking-wide shadow-xs"
+              className="h-11 rounded-xl bg-[#ffd6df] text-[#702434] border border-[#f4abbd] flex items-center justify-center font-black text-base tracking-wide shadow-xs"
             >
               {day}
             </div>
@@ -74,10 +74,10 @@ export const CoquetteRibbonTemplate: React.FC<TemplateProps> = ({ data }) => {
                 <div 
                   key={rIdx} 
                   className="grid grid-flow-col gap-2.5 items-center" 
-                  style={{ gridTemplateColumns: `135px repeat(${days.length}, minmax(0, 1fr))` }}
+                  style={{ gridTemplateColumns: `150px repeat(${days.length}, minmax(0, 1fr))` }}
                 >
                   {/* Time Badge */}
-                  <div className="h-10 rounded-xl bg-white border border-[#f8bcc9] text-[#702434] flex items-center justify-center font-bold text-xs tracking-tight shadow-xs px-2 font-sans">
+                  <div className="h-11 rounded-xl bg-white border border-[#f8bcc9] text-[#702434] flex items-center justify-center font-black text-[15px] sm:text-base tracking-tight shadow-xs px-2 font-sans">
                     {slot.time}
                   </div>
 
@@ -89,7 +89,7 @@ export const CoquetteRibbonTemplate: React.FC<TemplateProps> = ({ data }) => {
                     return (
                       <div
                         key={cIdx}
-                        className={`h-10 rounded-xl flex items-center justify-center px-3 text-center text-xs font-bold shadow-xs transition-all ${
+                        className={`h-11 rounded-xl flex items-center justify-center px-3 text-center text-[15px] sm:text-base font-extrabold shadow-xs transition-all ${
                           hasSubject
                             ? 'bg-[#fff0f3] border border-[#f8bcc9] text-[#702434]'
                             : 'bg-white/40 border border-dashed border-[#fae1e6] text-transparent'

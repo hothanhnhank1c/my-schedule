@@ -33,10 +33,10 @@ export const MinimalCleanTemplate: React.FC<TemplateProps> = ({ data }) => {
       {/* Main Grid */}
       <div className="flex flex-col gap-4">
         {/* Days Header */}
-        <div className="grid grid-flow-col gap-2 items-center" style={{ gridTemplateColumns: `130px repeat(${days.length}, minmax(0, 1fr))` }}>
+        <div className="grid grid-flow-col gap-2.5 items-center" style={{ gridTemplateColumns: `150px repeat(${days.length}, minmax(0, 1fr))` }}>
           <div className="text-xs font-bold uppercase tracking-wider text-slate-400 pl-2">Khung giờ</div>
           {days.map((day, idx) => (
-            <div key={idx} className="bg-slate-200 text-slate-800 py-2.5 px-2 rounded-lg text-center font-bold text-sm tracking-wide">
+            <div key={idx} className="bg-slate-200 text-slate-900 py-3 px-2 rounded-lg text-center font-extrabold text-base tracking-wide">
               {day}
             </div>
           ))}
@@ -57,10 +57,10 @@ export const MinimalCleanTemplate: React.FC<TemplateProps> = ({ data }) => {
             {section.slots.map((slot, rIdx) => (
               <div 
                 key={rIdx} 
-                className="grid grid-flow-col gap-2 items-center" 
-                style={{ gridTemplateColumns: `130px repeat(${days.length}, minmax(0, 1fr))` }}
+                className="grid grid-flow-col gap-2.5 items-center" 
+                style={{ gridTemplateColumns: `150px repeat(${days.length}, minmax(0, 1fr))` }}
               >
-                <div className="bg-white border border-slate-200 py-2.5 px-3 rounded-lg text-xs font-bold text-slate-600 text-center shadow-xs">
+                <div className="bg-white border border-slate-200 h-11 px-3 rounded-lg text-[15px] sm:text-base font-extrabold text-slate-800 flex items-center justify-center text-center shadow-xs">
                   {slot.time}
                 </div>
 
@@ -70,9 +70,9 @@ export const MinimalCleanTemplate: React.FC<TemplateProps> = ({ data }) => {
                   return (
                     <div
                       key={cIdx}
-                      className={`h-11 rounded-lg flex items-center justify-center px-3 text-center text-xs font-semibold border transition-all ${
+                      className={`h-11 rounded-lg flex items-center justify-center px-3 text-center text-[15px] sm:text-base border transition-all ${
                         hasSubject 
-                          ? 'bg-white border-indigo-200 text-indigo-950 shadow-sm font-bold border-l-4 border-l-indigo-600' 
+                          ? 'bg-white border-indigo-200 text-indigo-950 shadow-sm font-extrabold border-l-4 border-l-indigo-600' 
                           : 'bg-slate-100/60 border-slate-200/60 text-slate-400'
                       }`}
                     >

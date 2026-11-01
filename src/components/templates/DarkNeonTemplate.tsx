@@ -50,12 +50,12 @@ export const DarkNeonTemplate: React.FC<TemplateProps> = ({ data }) => {
       {/* Main Grid */}
       <div className="relative z-10 flex flex-col gap-3">
         {/* Days Header */}
-        <div className="grid grid-flow-col gap-2.5 items-center" style={{ gridTemplateColumns: `140px repeat(${days.length}, minmax(0, 1fr))` }}>
+        <div className="grid grid-flow-col gap-2.5 items-center" style={{ gridTemplateColumns: `150px repeat(${days.length}, minmax(0, 1fr))` }}>
           <div className="text-xs font-mono font-bold text-slate-500 tracking-wider pl-2 uppercase">TIME_SLOT</div>
           {days.map((day, idx) => (
             <div 
               key={idx} 
-              className="py-2.5 px-3 rounded-lg text-center font-bold text-sm tracking-wide bg-slate-900 border border-slate-700 text-slate-200"
+              className="h-11 flex items-center justify-center px-3 rounded-lg text-center font-black text-base tracking-wide bg-slate-900 border border-slate-700 text-slate-200"
             >
               {day}
             </div>
@@ -74,9 +74,9 @@ export const DarkNeonTemplate: React.FC<TemplateProps> = ({ data }) => {
                 <div 
                   key={rIdx} 
                   className="grid grid-flow-col gap-2.5 items-center" 
-                  style={{ gridTemplateColumns: `140px repeat(${days.length}, minmax(0, 1fr))` }}
+                  style={{ gridTemplateColumns: `150px repeat(${days.length}, minmax(0, 1fr))` }}
                 >
-                  <div className="bg-slate-900/90 border border-slate-800 text-cyan-400 py-2.5 px-2 rounded-lg text-xs font-mono font-bold text-center">
+                  <div className="bg-slate-900/90 border border-slate-800 text-cyan-400 h-11 px-2 rounded-lg text-[15px] sm:text-base font-mono font-black flex items-center justify-center text-center">
                     {slot.time}
                   </div>
 
@@ -88,9 +88,9 @@ export const DarkNeonTemplate: React.FC<TemplateProps> = ({ data }) => {
                     return (
                       <div
                         key={cIdx}
-                        className={`h-11 rounded-lg flex items-center justify-center px-3 text-center text-xs font-semibold border transition-all ${
+                        className={`h-11 rounded-lg flex items-center justify-center px-3 text-center text-[15px] sm:text-base transition-all ${
                           hasSubject 
-                            ? `${styleClass} font-bold` 
+                            ? `${styleClass} font-extrabold` 
                             : 'bg-slate-900/40 border-slate-800/60 text-slate-600'
                         }`}
                       >

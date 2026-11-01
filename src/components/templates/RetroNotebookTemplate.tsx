@@ -42,12 +42,12 @@ export const RetroNotebookTemplate: React.FC<TemplateProps> = ({ data }) => {
       {/* Main Grid */}
       <div className="flex flex-col gap-3">
         {/* Days Header */}
-        <div className="grid grid-flow-col gap-2 items-center" style={{ gridTemplateColumns: `130px repeat(${days.length}, minmax(0, 1fr))` }}>
+        <div className="grid grid-flow-col gap-2 items-center" style={{ gridTemplateColumns: `150px repeat(${days.length}, minmax(0, 1fr))` }}>
           <div className="text-center font-bold text-sm text-[#786c5e] uppercase tracking-wider">Thời gian</div>
           {days.map((day, idx) => (
             <div 
               key={idx} 
-              className="bg-[#eee5ce] text-[#3e342b] py-2 px-2 rounded text-center font-bold text-base border border-[#d6c7a7] shadow-xs"
+              className="bg-[#eee5ce] text-[#3e342b] h-11 flex items-center justify-center px-2 rounded text-center font-black text-lg border border-[#d6c7a7] shadow-xs"
             >
               {day}
             </div>
@@ -72,9 +72,9 @@ export const RetroNotebookTemplate: React.FC<TemplateProps> = ({ data }) => {
                 <div 
                   key={rIdx} 
                   className="grid grid-flow-col gap-2 items-center" 
-                  style={{ gridTemplateColumns: `130px repeat(${days.length}, minmax(0, 1fr))` }}
+                  style={{ gridTemplateColumns: `150px repeat(${days.length}, minmax(0, 1fr))` }}
                 >
-                  <div className="bg-[#fdfcf7] border border-[#d6c7a7] text-[#554b41] py-2 px-2 rounded text-xs font-mono font-bold text-center shadow-xs">
+                  <div className="bg-[#fdfcf7] border border-[#d6c7a7] text-[#554b41] h-11 px-2 rounded text-[15px] sm:text-base font-mono font-black flex items-center justify-center text-center shadow-xs">
                     {slot.time}
                   </div>
 
@@ -85,9 +85,9 @@ export const RetroNotebookTemplate: React.FC<TemplateProps> = ({ data }) => {
                     return (
                       <div
                         key={cIdx}
-                        className={`h-11 rounded flex items-center justify-center px-2 text-center text-sm transition-all border ${
+                        className={`h-11 rounded flex items-center justify-center px-2 text-center text-[16px] sm:text-[17px] transition-all border ${
                           hasSubject 
-                            ? 'bg-[#ffffff] border-[#c0b090] text-[#2c2724] font-bold shadow-xs' 
+                            ? 'bg-[#ffffff] border-[#c0b090] text-[#2c2724] font-black shadow-xs' 
                             : 'bg-transparent border-dashed border-[#dfd4bd] text-[#b3a58e]'
                         }`}
                       >

@@ -43,14 +43,14 @@ export const KawaiiLavenderTemplate: React.FC<TemplateProps> = ({ data }) => {
       {/* Main Grid */}
       <div className="flex flex-col gap-3">
         {/* Days Header */}
-        <div className="grid grid-flow-col gap-2.5 items-center" style={{ gridTemplateColumns: `135px repeat(${days.length}, minmax(0, 1fr))` }}>
-          <div className="text-center font-bold text-xs text-purple-500 uppercase tracking-widest font-comfortaa">Giờ học ⏰</div>
+        <div className="grid grid-flow-col gap-2.5 items-center" style={{ gridTemplateColumns: `150px repeat(${days.length}, minmax(0, 1fr))` }}>
+          <div className="text-center font-extrabold text-xs text-purple-500 uppercase tracking-widest font-comfortaa">Giờ học ⏰</div>
           {days.map((day, idx) => {
             const colorClass = dayColors[idx % dayColors.length];
             return (
               <div 
                 key={idx} 
-                className={`py-2 px-3 rounded-2xl text-center font-bold text-sm tracking-wide border-2 shadow-xs ${colorClass}`}
+                className={`h-11 rounded-2xl flex items-center justify-center font-black text-base tracking-wide border-2 shadow-xs ${colorClass}`}
               >
                 {day}
               </div>
@@ -70,9 +70,9 @@ export const KawaiiLavenderTemplate: React.FC<TemplateProps> = ({ data }) => {
                 <div 
                   key={rIdx} 
                   className="grid grid-flow-col gap-2.5 items-center" 
-                  style={{ gridTemplateColumns: `135px repeat(${days.length}, minmax(0, 1fr))` }}
+                  style={{ gridTemplateColumns: `150px repeat(${days.length}, minmax(0, 1fr))` }}
                 >
-                  <div className="bg-white/90 border-2 border-purple-200 text-purple-800 py-2 px-1 rounded-2xl text-xs font-bold text-center shadow-xs">
+                  <div className="bg-white/90 border-2 border-purple-200 text-purple-800 h-11 rounded-2xl text-[15px] sm:text-base font-black flex items-center justify-center px-2 shadow-xs font-sans">
                     {slot.time}
                   </div>
 
@@ -83,7 +83,7 @@ export const KawaiiLavenderTemplate: React.FC<TemplateProps> = ({ data }) => {
                     return (
                       <div
                         key={cIdx}
-                        className={`h-11 rounded-2xl flex items-center justify-center px-2 text-center text-xs font-bold border-2 transition-all shadow-xs ${colorClass}`}
+                        className={`h-11 rounded-2xl flex items-center justify-center px-3 text-center text-[15px] sm:text-base font-extrabold border-2 transition-all shadow-xs ${colorClass}`}
                       >
                         <span className="truncate w-full">{subject}</span>
                       </div>
