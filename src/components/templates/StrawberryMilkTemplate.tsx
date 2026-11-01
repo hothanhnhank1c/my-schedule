@@ -17,13 +17,13 @@ export const StrawberryMilkTemplate: React.FC<TemplateProps> = ({ data }) => {
   };
 
   return (
-    <div 
+    <div
       id="schedule-canvas-strawberry"
       className="relative w-[1050px] min-h-[720px] bg-[#fff5f7] text-[#590d22] p-8 select-none font-baloo shadow-2xl rounded-3xl border-4 border-[#ffb3c1] overflow-hidden"
       style={{ boxSizing: 'border-box' }}
     >
       {/* Background polka dots */}
-      <div 
+      <div
         className="absolute inset-0 pointer-events-none opacity-20"
         style={{
           backgroundImage: 'radial-gradient(#ff758f 2px, transparent 2px)',
@@ -92,9 +92,9 @@ export const StrawberryMilkTemplate: React.FC<TemplateProps> = ({ data }) => {
 
             <div className="flex flex-col gap-2">
               {section.slots.map((slot, rIdx) => (
-                <div 
-                  key={rIdx} 
-                  className="grid grid-flow-col gap-2.5 items-center" 
+                <div
+                  key={rIdx}
+                  className="grid grid-flow-col gap-2.5 items-center"
                   style={{ gridTemplateColumns: `150px repeat(${days.length}, minmax(0, 1fr))` }}
                 >
                   {/* Time Badge */}
@@ -110,7 +110,7 @@ export const StrawberryMilkTemplate: React.FC<TemplateProps> = ({ data }) => {
                     return (
                       <div
                         key={cIdx}
-                        className={`h-11 rounded-2xl flex items-center justify-center px-3 text-center text-[15px] sm:text-base font-extrabold shadow-xs transition-transform leading-tight overflow-hidden ${colorStyle}`}
+                        className={`h-11 rounded-2xl flex items-center justify-center px-3 text-center text-[18px] font-black shadow-xs transition-transform leading-tight overflow-hidden ${colorStyle}`}
                         title={subject}
                       >
                         <span className="truncate w-full">{subject}</span>
